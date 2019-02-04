@@ -40,4 +40,4 @@ git branch <newbranch>
 
 git merge <somebranch> -> залить в текущую ветку из somebranch  
 
-[back](.)
+[back](/)
