@@ -84,5 +84,3 @@ git checkout -b <newbranch>
 ```bash
 git merge <somebranch>
 ```
-
-[back](/)
