@@ -1,43 +1,88 @@
 # Git
 
-git config --global user.name "name"  
+Первоначальная конфигурация
+
+```bash
+git config --global user.name "name"
 git config --global user.email "email"
+```
 
-git fetch  
-git status  
-git pull  
+```bash
+git fetch
+git status
+git pull
+```
 
-git add . -> нормально отрабатывает изменение типа или перименование  
-git add * -> нормально обрабатывает перименование только в дочерних папках, хз  
-git add -A  
+```bash
+git add .
+git add *
+git add -A
+```
 
-git reset -> сбросить все добавленное перед коммитом  
+Сбросить все добавленное перед коммитом
 
-git checkout -- <filename> -> вернуться к версии файла  
+```bash
+git reset
+```
 
-git checkout master  
-git checkout 03ecdd7  
-git checkout HEAD  
-git checkout HEAD^  
-git checkout HEAD^^^  
-git checkout HEAD~6  
-git checkout -b <newbranch>  
+Вернуться к версии файла
 
-git log --pretty=oneline  
-git log --pretty=oneline --all -> ???  
-git log --pretty=oneline --graph  
-git log --pretty=format:'%h %ad | %s%d' --date=short  
+```bash
+git checkout -- <filename>
+```
 
-git revert HEAD -> отменить коммит  
-git revert HEAD --no-edit -> отменить без редактирования  
-если произошли конфликты git status  
-git revert --continue  
-git revert --abort -> отменить процесс реверта  
-добавить или удалить конфликтные файлы git add/rm, затем закоммитить  
+```bash
+git checkout 03ecdd7
+git checkout HEAD
+git checkout HEAD^
+git checkout HEAD^^^
+git checkout HEAD~6
+```
 
-git branch -> вывести ветки  
-git branch <newbranch>  
+```bash
+git log --pretty=oneline
+git log --pretty=oneline --all -> ???
+git log --pretty=oneline --graph
+git log --pretty=format:'%h %ad | %s%d' --date=short
+```
 
-git merge <somebranch> -> залить в текущую ветку из somebranch  
+```bash
+git revert HEAD -> отменить коммит
+git revert HEAD --no-edit -> отменить без редактирования
+если произошли конфликты git status
+git revert --continue
+git revert --abort -> отменить процесс реверта
+добавить или удалить конфликтные файлы git add/rm, затем закоммитить
+```
+
+Список веток
+
+```bash
+git branch
+```
+
+Новая ветка
+
+```bash
+git branch <newbranch>
+```
+
+Перейти на ветку
+
+```bash
+git checkout <branchname>
+```
+
+Создайть и перейти на ветку
+
+```bash
+git checkout -b <newbranch>
+```
+
+Залить в текущую ветку из somebranch
+
+```bash
+git merge <somebranch>
+```
 
 [back](/)
