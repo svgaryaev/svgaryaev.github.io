@@ -6,6 +6,10 @@
 * [Angular CLI](./angular/cli)
 * [Angular routing](./angular/routing)
 
+## CSS
+
+* [Flex](./css/flex)
+
 ## Git and HG
 
 * [Cheatsheet](./git)
