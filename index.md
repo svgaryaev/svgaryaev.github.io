@@ -9,6 +9,7 @@
 ## Git
 
 * [Cheatsheet](./git)
+* [GitHub Git Cheat Sheet](https://services.github.com/on-demand/downloads/github-git-cheat-sheet/)
 
 ## GitHub Pages
 
