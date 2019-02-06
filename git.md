@@ -1,17 +1,22 @@
 # Git
 
-Первоначальная конфигурация
+## Первоначальная конфигурация
 
 ```bash
 git config --global user.name "name"
 git config --global user.email "email"
 ```
 
+## Синхронизация
+
 ```bash
 git fetch
 git status
 git pull
+git pull --rebase
 ```
+
+## Индексация
 
 ```bash
 git add .
@@ -19,32 +24,17 @@ git add *
 git add -A
 ```
 
-Сбросить все добавленное перед коммитом
+## Отмена изменений
+
+### Отмена локальньных изменений
 
 ```bash
-git reset
+git reset # отменить индексирование
+git reset --hard # отменить все изменения
+git checkout -- <filename> # вернуться к версии файла
 ```
 
-Вернуться к версии файла
-
-```bash
-git checkout -- <filename>
-```
-
-```bash
-git checkout 03ecdd7
-git checkout HEAD
-git checkout HEAD^
-git checkout HEAD^^^
-git checkout HEAD~6
-```
-
-```bash
-git log --pretty=oneline
-git log --pretty=oneline --all -> ???
-git log --pretty=oneline --graph
-git log --pretty=format:'%h %ad | %s%d' --date=short
-```
+### Отмена общих изменений
 
 ```bash
 git revert HEAD -> отменить коммит
@@ -55,34 +45,43 @@ git revert --abort -> отменить процесс реверта
 добавить или удалить конфликтные файлы git add/rm, затем закоммитить
 ```
 
-Список веток
-
 ```bash
-git branch
+git checkout 03ecdd7
+git checkout HEAD
+git checkout HEAD^
+git checkout HEAD^^^
+git checkout HEAD~6
 ```
 
-Новая ветка
+## История
 
 ```bash
-git branch <newbranch>
+git log --pretty=oneline
+git log --pretty=oneline --all -> ???
+git log --pretty=oneline --graph
+git log --pretty=format:'%h %ad | %s%d' --date=short
 ```
 
-Перейти на ветку
+## Ветки
 
 ```bash
-git checkout <branchname>
+git branch # вывести список всех веток
+
+git branch <newbranch> # создать новую ветку
+git checkout <newbranch> # перейти на ветку
+
+git checkout -b <newbranch> # сокращение для предыдущих двух
+
+git push -u origin <newbranch> # добавить ветку на github
+# -u is short for --set-upstream option
 ```
 
-Создайть и перейти на ветку
+## Слияние
+
+### merge
 
 ```bash
-git checkout -b <newbranch>
-```
-
-Залить в текущую ветку из somebranch
-
-```bash
-git merge <somebranch>
+git merge <branch>
 ```
 
 ### cherry-pick
@@ -90,5 +89,5 @@ git merge <somebranch>
 Команда git cherry-pick используется для того чтобы взять изменения, внесённые каким-либо коммитом, и попытаться применить их заново в виде нового коммита наверху текущей ветки. Это может оказаться полезным чтобы забрать парочку коммитов из другой ветки без полного слияния с той веткой.
 
 ```bash
-$ git cherry-pick <commitnumber>
+git cherry-pick <commitnumber>
 ```
