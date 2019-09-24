@@ -30,6 +30,7 @@ git add -A
 
 ```bash
 git reset # отменить индексирование
+git reset --soft <commit_hash> - откатиться до конкретного коммита
 git reset --hard # отменить все изменения
 git checkout -- <filename> # вернуться к версии файла
 ```
@@ -60,6 +61,15 @@ git log --pretty=oneline
 git log --pretty=oneline --all -> ???
 git log --pretty=oneline --graph
 git log --pretty=format:'%h %ad | %s%d' --date=short
+```
+
+## Stash
+
+```bash
+git stash # спрятать изменения
+git stash apply # вернуть последние изменения
+git stash list # вывести список
+git stash apply <stash@{2}> # вернуть конкретные изменения
 ```
 
 ## Ветки
