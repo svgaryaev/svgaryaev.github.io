@@ -7,12 +7,20 @@ git config --global user.name "name"
 git config --global user.email "email"
 ```
 
+## Создание
+
+```bash
+$ git init <название проекта>
+$ git clone <url-адрес>
+```
+
 ## Синхронизация
 
 ```bash
-git fetch
 git status
-git pull
+git fetch [remote] # скачивает историю с удаленного репозитория
+git merge [remote]/[branch] # сливает изменения из ветки удаленного репозитория в текущую ветку локального
+git pull # сочетание git fetch и git merge
 git pull --rebase
 ```
 
