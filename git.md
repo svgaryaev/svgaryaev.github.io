@@ -6,6 +6,7 @@
 git config --global user.name "name"
 git config --global user.email "email"
 git config --global core.editor "nano"
+git config --global core.autocrlf true # автоматически конвертирует CRLF в LF и обратно
 ```
 
 ## Создание
