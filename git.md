@@ -150,3 +150,16 @@ git config --global alias.st status
 git config --global alias.br branch
 git config --global alias.hist "log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
 ```
+
+## Уход за репозиторием
+
+В больших репозиториях при переключении с ветки на ветку, коммитах, ребейзе может появляться сообщение
+
+> `Auto packing the repository for optimum performance`
+
+В этот момент запустится сборщик мусора. Отключить его запуск можно командой
+
+```bash
+git config gc.auto 0
+git config --unset gc.auto # вернуть обратно
+```
