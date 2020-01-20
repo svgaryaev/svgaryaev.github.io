@@ -15,6 +15,10 @@
 * [Cheatsheet](./git)
 * [GitHub Git Cheat Sheet](https://services.github.com/on-demand/downloads/github-git-cheat-sheet/)
 
+## Regex в VS Code и JavaScript
+
+* [Regex в VS Code](./regex)
+
 ## GitHub Pages
 
 * [Cayman theme](https://github.com/pages-themes/cayman)
