@@ -79,6 +79,8 @@ git log --pretty=oneline
 git log --pretty=oneline --all -> ???
 git log --pretty=oneline --graph
 git log --pretty=format:'%h %ad | %s%d' --date=short
+git log master..feature # показать какие коммиты есть в ветке feature, но нет в master
+git log master.. # не обязательно указывает feature ветку, если git уже находится на ней
 ```
 
 ## Сохранение фрагментов
