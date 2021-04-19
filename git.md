@@ -165,3 +165,12 @@ git config --global alias.hist "log --pretty=format:'%h %ad | %s%d [%an]' --grap
 git config gc.auto 0
 git config --unset gc.auto # вернуть обратно
 ```
+
+## Credential manager
+
+Если логин и пароль перестал приниматься интерактивным вводом и сохраняться в системе, то стоит обновить сам git
+
+```bash
+git update-git-for-windows
+git update # для остальных систем
+```
